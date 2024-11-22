@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stenographer Dictation Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+    .controls {
+      margin-bottom: 20px;
+    }
+    .controls label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .controls input[type="range"] {
+      width: 100%;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stenographer Dictation Practice</h1>
+    <textarea id="script" placeholder="Paste or write your dictation script here..."></textarea>
+    <div class="controls">
+      <label for="speed">Speed (Words Per Minute): <span id="speedValue">90</span> WPM</label>
+      <input type="range" id="speed" min="80" max="120" value="90">
+    </div>
+    <button id="startBtn">Start Dictation</button>
+    <button id="stopBtn" disabled>Stop Dictation</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
